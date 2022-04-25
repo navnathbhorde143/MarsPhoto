@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <h2 style="text-align:center; color: white;" class="bg-dark ">Mars Photo</h2>
+    <div class="d-flex flex-wrap">
+        <div *ngFor="let item of  MarsObject.photos" class="card m-3 p-2" style="width:200px;">
+            <img [src]="item.img_src" class="card-img-top" height="200px">
+            <div class="card-header">
+                <h4>{{item.id}}</h4>
+            </div>
+            <div class="card-body">
+                <dl>
+                    <dt>Camera Name</dt>
+                    <dd>{{item.camera.full_name}}</dd>
+                    <dt>Landing Date</dt>
+                    <dd>{{item.rover.landing_date}}</dd>
+                    <dt>Launch Date</dt>
+                    <dd>{{item.rover.launch_date}}</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
